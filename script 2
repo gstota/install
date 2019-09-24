@@ -1,0 +1,8 @@
+
+git clone https://www.github.com/odoo/odoo --depth 1 --branch 11.0 /opt/odoo/odoo11
+
+cd /opt/odoo
+
+pip3 install wheel
+
+pip3 install -r odoo11/requirements.txt
