@@ -6,24 +6,28 @@ sudo apt install git python3-pip build-essential wget python3-dev python3-venv p
 
 sudo useradd -m -d /opt/odoo -U -r -s /bin/bash odoo
 
-sudo apt install postgresql
+sudo apt install postgresql -y
 
 sudo su - postgres -c "createuser -s odoo"
 
 wget https://builds.wkhtmltopdf.org/0.12.1.3/wkhtmltox_0.12.1.3-1~bionic_amd64.deb
 
 sudo dpkg -i wkhtmltox_0.12.1.3-1~bionic_amd64.deb
-sudo apt-get install -f
+sudo apt-get install -f -y
 sudo dpkg -i wkhtmltox_0.12.1.3-1~bionic_amd64.deb
 sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin
 sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin
+
+
+pip3 install jsonrpc2 daemonize
 
 sudo mkdir /opt/aeroo
 cd /opt/aeroo
 sudo git clone https://github.com/aeroo/aeroo_docs.git
 yes | sudo python3 /opt/aeroo/aeroo_docs/aeroo-docs start -c /etc/aeroo-docs.conf
 
-pip3 install jsonrpc2 daemonize
+cd
+cd install
 
 sudo mv script2.sh /opt/odoo/
 sudo mv script3.sh /opt/odoo/
