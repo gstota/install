@@ -35,6 +35,6 @@ yes | sudo python3 /opt/aeroo/aeroo_docs/aeroo-docs start -c /etc/aeroo-docs.con
 cd
 cd install
 
-sudo mv script2.sh /opt/odoo/
-sudo mv script3.sh /opt/odoo/
+sudo mv script2 /opt/odoo/
+sudo mv script3 /opt/odoo/
 sudo chown -R odoo:odoo /opt/odoo/*
