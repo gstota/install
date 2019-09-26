@@ -45,7 +45,7 @@ sudo -iu odoo git clone https://www.github.com/odoo/odoo --depth 1 --branch 11.0
 sudo -iu odoo cd /opt/odoo
 
 sudo -iu odoo mkdir /opt/odoo/odoo11-custom-addons
-sudo -iu odoo cd odoo11-custom-addons
+sudo -iu odoo cd /opt/odoo/odoo11-custom-addons
 
 sudo -iu odoo wget https://github.com/ingadhoc/odoo-argentina/archive/11.0.zip -O ingadhoc-odoo-argentina.zip
 sudo -iu odoo wget https://github.com/ingadhoc/account-financial-tools/archive/11.0.zip -O ingadhoc-account-financial-tools.zip
@@ -69,7 +69,7 @@ sudo -iu odoo unzip ingadhoc-argentina-sale.zip
 sudo -iu odoo unzip ingadhoc-stock.zip
 sudo -iu odoo unzip partner_identification.zip
 
-sudo -iu odoo rm *.zip
+sudo -iu odoo rm /opt/odoo/odoo11-custom-addons/*.zip
 
 sudo -iu odoo pip3 install wheel
 sudo -iu odoo pip3 install --user  -r odoo-argentina-11.0/requirements.txt
@@ -77,10 +77,10 @@ sudo -iu odoo pip3 install -r aeroo_reports-11.0/requirements.txt
 
 sudo -iu odoo pip3 install -r /opt/odoo/odoo11/requirements.txt
 
-sudo mv $home/install/odoo11.service /etc/systemd/system/
-sudo mv $home/install/odoo11.conf /etc/
-sudo mv $home/install/aeroo.service /etc/systemd/system/
-sudo mv $home/install/office.service /etc/systemd/system/
+sudo mv odoo11.service /etc/systemd/system/
+sudo mv odoo11.conf /etc/
+sudo mv aeroo.service /etc/systemd/system/
+sudo mv office.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
 sudo systemctl enable office.service
