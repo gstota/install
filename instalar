@@ -32,9 +32,9 @@ cd /opt/aeroo
 sudo git clone https://github.com/aeroo/aeroo_docs.git
 yes | sudo python3 /opt/aeroo/aeroo_docs/aeroo-docs start -c /etc/aeroo-docs.conf
 
-cd $home/install
-sudo mv /script2 /opt/odoo/
-sudo chown -R odoo:odoo /opt/odoo/*
+#cd $home/install
+#sudo mv script2 /opt/odoo/
+#sudo chown -R odoo:odoo /opt/odoo/*
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=500000
 sudo chmod 0600 /swapfile
 sudo mkswap /swapfile
@@ -76,3 +76,15 @@ sudo -iu odoo pip3 install --user  -r odoo-argentina-11.0/requirements.txt
 sudo -iu odoo pip3 install -r aeroo_reports-11.0/requirements.txt
 
 sudo -iu odoo pip3 install -r /opt/odoo/odoo11/requirements.txt
+
+sudo mv $home/install/odoo11.service /etc/systemd/system/
+sudo mv $home/install/odoo11.conf /etc/
+sudo mv $home/install/aeroo.service /etc/systemd/system/
+sudo mv $home/install/office.service /etc/systemd/system/
+
+sudo systemctl daemon-reload
+sudo systemctl enable office.service
+sudo systemctl enable aeroo.service
+sudo systemctl enable odoo11.service
+
+sudo reboot
