@@ -87,4 +87,4 @@ sudo systemctl enable office.service
 sudo systemctl enable aeroo.service
 sudo systemctl enable odoo11.service
 
-sudo reboot
+#sudo reboot
