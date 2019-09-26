@@ -36,7 +36,6 @@ cd
 cd install
 
 sudo mv script2 /opt/odoo/
-sudo mv script3 /opt/odoo/
 sudo chown -R odoo:odoo /opt/odoo/*
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=500000
 sudo chmod 0600 /swapfile
