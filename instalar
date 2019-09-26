@@ -40,3 +40,39 @@ sudo chmod 0600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 
+git clone https://www.github.com/odoo/odoo --depth 1 --branch 11.0 /opt/odoo/odoo11
+
+cd /opt/odoo
+
+mkdir /opt/odoo/odoo11-custom-addons
+cd odoo11-custom-addons
+
+wget https://github.com/ingadhoc/odoo-argentina/archive/11.0.zip -O ingadhoc-odoo-argentina.zip
+wget https://github.com/ingadhoc/account-financial-tools/archive/11.0.zip -O ingadhoc-account-financial-tools.zip
+wget https://github.com/ingadhoc/account-payment/archive/11.0.zip -O ingadhoc-account-payment.zip
+wget https://github.com/ingadhoc/aeroo_reports/archive/11.0.zip -O ingadhoc-aeroo_reports.zip
+wget https://github.com/ingadhoc/miscellaneous/archive/11.0.zip -O ingadhoc-miscellaneous.zip
+wget https://github.com/ingadhoc/argentina-reporting/archive/11.0.zip -O ingadhoc-argentina-reporting.zip
+wget https://github.com/ingadhoc/reporting-engine/archive/11.0.zip -O ingadhoc-reporting-engine.zip
+wget https://github.com/ingadhoc/argentina-sale/archive/11.0.zip -O ingadhoc-argentina-sale.zip
+wget https://github.com/ingadhoc/stock/archive/11.0.zip -O ingadhoc-stock.zip
+wget https://apps.odoo.com/loempia/download/partner_identification/11.0.1.0.0/4gXzqj52wzlBc64roBAw7v.zip -O partner_identification.zip;
+
+unzip ingadhoc-odoo-argentina.zip
+unzip ingadhoc-account-financial-tools.zip
+unzip ingadhoc-account-payment.zip
+unzip ingadhoc-aeroo_reports.zip
+unzip ingadhoc-miscellaneous.zip
+unzip ingadhoc-argentina-reporting.zip
+unzip ingadhoc-reporting-engine.zip
+unzip ingadhoc-argentina-sale.zip
+unzip ingadhoc-stock.zip
+unzip partner_identification.zip
+
+rm *.zip
+
+pip3 install wheel
+pip3 install --user  -r odoo-argentina-11.0/requirements.txt
+pip3 install -r aeroo_reports-11.0/requirements.txt
+
+pip3 install -r /opt/odoo/odoo11/requirements.txt
