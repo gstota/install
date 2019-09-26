@@ -30,14 +30,9 @@ sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin
 
 pip3 install jsonrpc2 daemonize
 
-sudo mkdir /opt/aeroo
-cd /opt/aeroo
-sudo git clone https://github.com/aeroo/aeroo_docs.git
+sudo git clone https://github.com/aeroo/aeroo_docs.git /opt/aeroo/aeroo_docs/
 yes | sudo python3 /opt/aeroo/aeroo_docs/aeroo-docs start -c /etc/aeroo-docs.conf
 
-#cd $home/install
-#sudo mv script2 /opt/odoo/
-#sudo chown -R odoo:odoo /opt/odoo/*
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=500000
 sudo chmod 0600 /swapfile
 sudo mkswap /swapfile
@@ -45,38 +40,35 @@ sudo swapon /swapfile
 
 sudo -iu odoo git clone https://www.github.com/odoo/odoo --depth 1 --branch 11.0 /opt/odoo/odoo11
 
-sudo -iu odoo cd /opt/odoo
-
 sudo -iu odoo mkdir /opt/odoo/odoo11-custom-addons
-sudo -iu odoo cd /opt/odoo/odoo11-custom-addons
 
-sudo -iu odoo wget https://github.com/ingadhoc/odoo-argentina/archive/11.0.zip -O ingadhoc-odoo-argentina.zip
-sudo -iu odoo wget https://github.com/ingadhoc/account-financial-tools/archive/11.0.zip -O ingadhoc-account-financial-tools.zip
-sudo -iu odoo wget https://github.com/ingadhoc/account-payment/archive/11.0.zip -O ingadhoc-account-payment.zip
-sudo -iu odoo wget https://github.com/ingadhoc/aeroo_reports/archive/11.0.zip -O ingadhoc-aeroo_reports.zip
-sudo -iu odoo wget https://github.com/ingadhoc/miscellaneous/archive/11.0.zip -O ingadhoc-miscellaneous.zip
-sudo -iu odoo sudo -iu odoo sudo -iu odoo wget https://github.com/ingadhoc/argentina-reporting/archive/11.0.zip -O ingadhoc-argentina-reporting.zip
-sudo -iu odoo sudo -iu odoo wget https://github.com/ingadhoc/reporting-engine/archive/11.0.zip -O ingadhoc-reporting-engine.zip
-sudo -iu odoo wget https://github.com/ingadhoc/argentina-sale/archive/11.0.zip -O ingadhoc-argentina-sale.zip
-sudo -iu odoo wget https://github.com/ingadhoc/stock/archive/11.0.zip -O ingadhoc-stock.zip
-sudo -iu odoo wget https://apps.odoo.com/loempia/download/partner_identification/11.0.1.0.0/4gXzqj52wzlBc64roBAw7v.zip -O partner_identification.zip;
+sudo -iu odoo wget https://github.com/ingadhoc/odoo-argentina/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons/ingadhoc-odoo-argentina.zip
+sudo -iu odoo wget https://github.com/ingadhoc/account-financial-tools/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons/ingadhoc-account-financial-tools.zip
+sudo -iu odoo wget https://github.com/ingadhoc/account-payment/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons/ingadhoc-account-payment.zip
+sudo -iu odoo wget https://github.com/ingadhoc/aeroo_reports/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons/ingadhoc-aeroo_reports.zip
+sudo -iu odoo wget https://github.com/ingadhoc/miscellaneous/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons/ingadhoc-miscellaneous.zip
+sudo -iu odoo wget https://github.com/ingadhoc/argentina-reporting/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons/ingadhoc-argentina-reporting.zip
+sudo -iu odoo wget https://github.com/ingadhoc/reporting-engine/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons//opt/odoo/odoo11-custom-addons/ingadhoc-reporting-engine.zip
+sudo -iu odoo wget https://github.com/ingadhoc/argentina-sale/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-argentina-sale.zip
+sudo -iu odoo wget https://github.com/ingadhoc/stock/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-stock.zip
+sudo -iu odoo wget https://apps.odoo.com/loempia/download/partner_identification/11.0.1.0.0/4gXzqj52wzlBc64roBAw7v.zip -O /opt/odoo/odoo11-custom-addons/partner_identification.zip;
 
-sudo -iu odoo unzip ingadhoc-odoo-argentina.zip
-sudo -iu odoo unzip ingadhoc-account-financial-tools.zip
-sudo -iu odoo unzip ingadhoc-account-payment.zip
-sudo -iu odoo unzip ingadhoc-aeroo_reports.zip
-sudo -iu odoo unzip ingadhoc-miscellaneous.zip
-sudo -iu odoo unzip ingadhoc-argentina-reporting.zip
-sudo -iu odoo unzip ingadhoc-reporting-engine.zip
-sudo -iu odoo unzip ingadhoc-argentina-sale.zip
-sudo -iu odoo unzip ingadhoc-stock.zip
-sudo -iu odoo unzip partner_identification.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-odoo-argentina.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-account-financial-tools.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-account-payment.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-aeroo_reports.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-miscellaneous.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-argentina-reporting.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-reporting-engine.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-argentina-sale.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-stock.zip
+sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/partner_identification.zip
 
 sudo -iu odoo rm /opt/odoo/odoo11-custom-addons/*.zip
 
 sudo -iu odoo pip3 install wheel
-sudo -iu odoo pip3 install --user  -r odoo-argentina-11.0/requirements.txt
-sudo -iu odoo pip3 install -r aeroo_reports-11.0/requirements.txt
+sudo -iu odoo pip3 install --user -r /opt/odoo/odoo11-custom-addons/odoo-argentina-11.0/requirements.txt
+sudo -iu odoo pip3 install -r /opt/odoo/odoo11-custom-addons/aeroo_reports-11.0/requirements.txt
 
 sudo -iu odoo pip3 install -r /opt/odoo/odoo11/requirements.txt
 
