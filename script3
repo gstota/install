@@ -1,0 +1,11 @@
+sudo mv $home/install/odoo11.service /etc/systemd/system/
+sudo mv $home/install/odoo11.conf /etc/
+sudo mv $home/install/aeroo.service /etc/systemd/system/
+sudo mv $home/install/office.service /etc/systemd/system/
+
+sudo systemctl daemon-reload
+sudo systemctl enable office.service
+sudo systemctl enable aeroo.service
+sudo systemctl enable odoo11.service
+
+sudo reboot
