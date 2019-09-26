@@ -1,0 +1,8 @@
+[Unit]
+Description=office
+
+[Service]
+ExecStart=/usr/bin/libreoffice --headless --accept="socket,host=localhost,port=8100,tcpNoDelay=1;urp;"
+
+[Install]
+WantedBy=multi-user.target
