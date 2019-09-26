@@ -1,0 +1,10 @@
+[Unit]
+Description=Aeroo-Docs
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/opt/aeroo/aeroo_docs/aeroo-docs start
+
+[Install]
+WantedBy=multi-user.target
