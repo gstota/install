@@ -33,11 +33,6 @@ unzip partner_identification.zip
 
 rm *.zip
 
-cd odoo-argentina-11.0
-pip3 install -r requirements.txt
-cd ..
-
-cd aeroo_reports-11.0
-pip3 install -r requirements.txt
-cd ..
+pip3 --user install -r odoo-argentina-11.0/requirements.txt
+pip3 install -r aeroo_reports-11.0/requirements.txt
 
