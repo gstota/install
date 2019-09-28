@@ -33,11 +33,6 @@ pip3 install jsonrpc2 daemonize
 sudo git clone https://github.com/aeroo/aeroo_docs.git /opt/aeroo/aeroo_docs/
 yes | sudo python3 /opt/aeroo/aeroo_docs/aeroo-docs start -c /etc/aeroo-docs.conf
 
-sudo dd if=/dev/zero of=/swapfile bs=1024 count=500000
-sudo chmod 0600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-
 sudo -iu odoo git clone https://www.github.com/odoo/odoo --depth 1 --branch 11.0 /opt/odoo/odoo11
 
 sudo -iu odoo mkdir /opt/odoo/odoo11-custom-addons
