@@ -77,8 +77,9 @@ sudo mv /opt/confs/odoo11.service /etc/systemd/system/
 sudo mv /opt/confs/odoo11.conf /etc/
 sudo mv /opt/confs/aeroo.service /etc/systemd/system/
 sudo mv /opt/confs/office.service /etc/systemd/system/
-sudo mv /opt/confs/nginxdef /etc/nginx/sites-available
-#sudo rm -r /opt/confs
+sudo mv /opt/confs/nginxdef /etc/nginx/sites-available/
+sudo mv /opt/confs/letsencrypt.conf /etc/nginx/snippets/
+sudo mv /opt/confs/ssl.conf /etc/nginx/snippets/ssl.conf
 sudo systemctl daemon-reload
 sudo systemctl enable office.service
 sudo systemctl enable aeroo.service
@@ -91,11 +92,12 @@ sudo chmod g+s /var/lib/letsencrypt
 
 
 sudo sed -i -e "s/example.com/$dom/g" /etc/nginx/sites-available/nginxdef
+sudo sed -i -e "s/example.com/$dom/g" /opt/confs/odoosite
 sudo mv /etc/nginx/sites-available/nginxdef /etc/nginx/sites-available/$dom
 sudo ln -s /etc/nginx/sites-available/$dom /etc/nginx/sites-enabled
-
+sudo systemctl restart nginx
 sudo certbot certonly --agree-tos --email gstota@gmail.com --no-eff-email --webroot -w /var/lib/letsencrypt/ -d $dom
 
 sudo mv /opt/confs/odoosite /etc/nginx/sites-available/$dom
-
-#sudo reboot
+sudo rm -r /opt/confs
+sudo reboot
