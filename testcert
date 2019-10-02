@@ -27,6 +27,8 @@ sudo sed -i -e "s/example.com/$dom/g" /opt/confs/odoosite
 sudo mv /etc/nginx/sites-available/nginxdef /etc/nginx/sites-available/$dom
 sudo ln -s /etc/nginx/sites-available/$dom /etc/nginx/sites-enabled/
 
+sudo systemctl restart nginx
+
 sudo certbot certonly --agree-tos --email gstota@gmail.com --no-eff-email --webroot -w /var/lib/letsencrypt/ -d $dom
 
 sudo mv /opt/confs/odoosite /etc/nginx/sites-available/$dom
