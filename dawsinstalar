@@ -49,7 +49,7 @@ sudo -iu odoo git clone https://github.com/ingadhoc/account-payment.git --branch
 sudo -iu odoo git clone https://github.com/ingadhoc/aeroo_reports.git --branch 11.0 /opt/odoo/odoo11-custom-addons/aeroo_reports-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/argentina-reporting.git --branch 11.0 /opt/odoo/odoo11-custom-addons/argentina-reporting-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/argentina-sale.git --branch 11.0 /opt/odoo/odoo11-custom-addons/argentina-sale.11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/miscellaneus-11.0 --branch 11.0 /opt/odoo/odoo11-custom-addons/miscellaneus-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/miscellaneous.git --branch 11.0 /opt/odoo/odoo11-custom-addons/miscellanoeus-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/reporting-engine.git --branch 11.0 /opt/odoo/odoo11-custom-addons/reporting-engine-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/stock.git --branch 11.0 /opt/odoo/odoo11-custom-addons/stock-11.0/
 sudo -iu odoo wget https://apps.odoo.com/loempia/download/partner_identification/11.0.1.0.0/4gXzqj52wzlBc64roBAw7v.zip -O /opt/odoo/odoo11-custom-addons/partner_identification.zip;
