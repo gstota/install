@@ -90,6 +90,7 @@ sudo mv /opt/confs/office.service /etc/systemd/system/
 sudo mv /opt/confs/nginxdef /etc/nginx/sites-available/
 sudo mv /opt/confs/letsencrypt.conf /etc/nginx/snippets/
 sudo mv /opt/confs/ssl.conf /etc/nginx/snippets/ssl.conf
+sudo mv /opt/confs/cerbot /etc/conf.d/cerbot
 sudo systemctl daemon-reload
 sudo systemctl enable office.service
 sudo systemctl enable aeroo.service
