@@ -48,7 +48,7 @@ sudo -iu odoo git clone https://github.com/ingadhoc/account-financial-tools.git 
 sudo -iu odoo git clone https://github.com/ingadhoc/account-payment.git --branch 11.0 /opt/odoo/odoo11-custom-addons/account-payment-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/aeroo_reports.git --branch 11.0 /opt/odoo/odoo11-custom-addons/aeroo_reports-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/argentina-reporting.git --branch 11.0 /opt/odoo/odoo11-custom-addons/argentina-reporting-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/argentina-sale.git --branch 11.0 /opt/odoo/odoo11-custom-addons/argentina-sale.11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/argentina-sale.git --branch 11.0 /opt/odoo/odoo11-custom-addons/argentina-sale-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/miscellaneous.git --branch 11.0 /opt/odoo/odoo11-custom-addons/miscellanoeus-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/reporting-engine.git --branch 11.0 /opt/odoo/odoo11-custom-addons/reporting-engine-11.0/
 sudo -iu odoo git clone https://github.com/ingadhoc/stock.git --branch 11.0 /opt/odoo/odoo11-custom-addons/stock-11.0/
@@ -106,7 +106,7 @@ sudo sed -i -e "s/example.com/$dom/g" /opt/confs/odoositedomain
 sudo mv /etc/nginx/sites-available/nginxdef /etc/nginx/sites-available/$dom
 sudo ln -s /etc/nginx/sites-available/$dom /etc/nginx/sites-enabled
 sudo systemctl restart nginx
-sudo certbot certonly --agree-tos --email gstota@gmail.com --no-eff-email --webroot -w /var/lib/letsencrypt/ -d $dom
+sudo certbot certonly --agree-tos --email gstota@gmail.com --no-eff-email --webroot -w /var/lib/letsencrypt/ -d $dom -d www.$dom
 
 sudo mv /opt/confs/odoositedomain /etc/nginx/sites-available/$dom
 sudo rm -r /opt/confs
