@@ -34,51 +34,51 @@ sudo pip3 install jsonrpc2 daemonize
 sudo git clone https://github.com/aeroo/aeroo_docs.git /opt/aeroo/aeroo_docs/
 yes | sudo python3 /opt/aeroo/aeroo_docs/aeroo-docs start -c /etc/aeroo-docs.conf
 
-sudo -iu odoo git clone https://www.github.com/odoo/odoo --depth 1 --branch 11.0 /opt/odoo/odoo11
+sudo -iu odoo git clone https://www.github.com/odoo/odoo --depth 1 --branch 11.0 /opt/odoo/odoo
 
-sudo -iu odoo mkdir /opt/odoo/odoo11-custom-addons
+sudo -iu odoo mkdir /opt/odoo/odoo-custom-addons
 
-#sudo -iu odoo wget https://github.com/ingadhoc/odoo-argentina/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-odoo-argentina.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/account-financial-tools/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-account-financial-tools.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/account-payment/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-account-payment.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/aeroo_reports/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-aeroo_reports.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/miscellaneous/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-miscellaneous.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/argentina-reporting/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-argentina-reporting.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/reporting-engine/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-reporting-engine.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/argentina-sale/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-argentina-sale.zip
-#sudo -iu odoo wget https://github.com/ingadhoc/stock/archive/11.0.zip -O /opt/odoo/odoo11-custom-addons/ingadhoc-stock.zip
-sudo -iu odoo git clone https://github.com/ingadhoc/odoo-argentina.git --branch 11.0 /opt/odoo/odoo11-custom-addons/odoo-argentina-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/account-financial-tools.git --branch 11.0 /opt/odoo/odoo11-custom-addons/account-financial-tools-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/account-payment.git --branch 11.0 /opt/odoo/odoo11-custom-addons/account-payment-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/aeroo_reports.git --branch 11.0 /opt/odoo/odoo11-custom-addons/aeroo_reports-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/argentina-reporting.git --branch 11.0 /opt/odoo/odoo11-custom-addons/argentina-reporting-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/argentina-sale.git --branch 11.0 /opt/odoo/odoo11-custom-addons/argentina-sale-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/miscellaneous.git --branch 11.0 /opt/odoo/odoo11-custom-addons/miscellaneous-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/reporting-engine.git --branch 11.0 /opt/odoo/odoo11-custom-addons/reporting-engine-11.0/
-sudo -iu odoo git clone https://github.com/ingadhoc/stock.git --branch 11.0 /opt/odoo/odoo11-custom-addons/stock-11.0/
-sudo -iu odoo wget https://apps.odoo.com/loempia/download/partner_identification/11.0.1.0.0/4gXzqj52wzlBc64roBAw7v.zip -O /opt/odoo/odoo11-custom-addons/partner_identification.zip;
+#sudo -iu odoo wget https://github.com/ingadhoc/odoo-argentina/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-odoo-argentina.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/account-financial-tools/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-account-financial-tools.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/account-payment/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-account-payment.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/aeroo_reports/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-aeroo_reports.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/miscellaneous/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-miscellaneous.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/argentina-reporting/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-argentina-reporting.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/reporting-engine/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-reporting-engine.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/argentina-sale/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-argentina-sale.zip
+#sudo -iu odoo wget https://github.com/ingadhoc/stock/archive/11.0.zip -O /opt/odoo/odoo-custom-addons/ingadhoc-stock.zip
+sudo -iu odoo git clone https://github.com/ingadhoc/odoo-argentina.git --branch 11.0 /opt/odoo/odoo-custom-addons/odoo-argentina-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/account-financial-tools.git --branch 11.0 /opt/odoo/odoo-custom-addons/account-financial-tools-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/account-payment.git --branch 11.0 /opt/odoo/odoo-custom-addons/account-payment-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/aeroo_reports.git --branch 11.0 /opt/odoo/odoo-custom-addons/aeroo_reports-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/argentina-reporting.git --branch 11.0 /opt/odoo/odoo-custom-addons/argentina-reporting-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/argentina-sale.git --branch 11.0 /opt/odoo/odoo-custom-addons/argentina-sale-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/miscellaneous.git --branch 11.0 /opt/odoo/odoo-custom-addons/miscellaneous-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/reporting-engine.git --branch 11.0 /opt/odoo/odoo-custom-addons/reporting-engine-11.0/
+sudo -iu odoo git clone https://github.com/ingadhoc/stock.git --branch 11.0 /opt/odoo/odoo-custom-addons/stock-11.0/
+sudo -iu odoo wget https://apps.odoo.com/loempia/download/partner_identification/11.0.1.0.0/4gXzqj52wzlBc64roBAw7v.zip -O /opt/odoo/odoo-custom-addons/partner_identification.zip;
 
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-odoo-argentina.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-account-financial-tools.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-account-payment.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-aeroo_reports.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-miscellaneous.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-argentina-reporting.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-reporting-engine.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-argentina-sale.zip -d /opt/odoo/odoo11-custom-addons/
-#sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/ingadhoc-stock.zip -d /opt/odoo/odoo11-custom-addons/
-sudo -iu odoo unzip /opt/odoo/odoo11-custom-addons/partner_identification.zip -d /opt/odoo/odoo11-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-odoo-argentina.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-account-financial-tools.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-account-payment.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-aeroo_reports.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-miscellaneous.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-argentina-reporting.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-reporting-engine.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-argentina-sale.zip -d /opt/odoo/odoo-custom-addons/
+#sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/ingadhoc-stock.zip -d /opt/odoo/odoo-custom-addons/
+sudo -iu odoo unzip /opt/odoo/odoo-custom-addons/partner_identification.zip -d /opt/odoo/odoo-custom-addons/
 
-sudo -iu odoo rm /opt/odoo/odoo11-custom-addons/*.zip
+sudo -iu odoo rm /opt/odoo/odoo-custom-addons/*.zip
 
 sudo -iu odoo pip3 install wheel
-sudo -iu odoo pip3 install --user -r /opt/odoo/odoo11-custom-addons/odoo-argentina-11.0/requirements.txt
-sudo -iu odoo pip3 install -r /opt/odoo/odoo11-custom-addons/aeroo_reports-11.0/requirements.txt
+sudo -iu odoo pip3 install --user -r /opt/odoo/odoo-custom-addons/odoo-argentina-11.0/requirements.txt
+sudo -iu odoo pip3 install -r /opt/odoo/odoo-custom-addons/aeroo_reports-11.0/requirements.txt
 
-sudo -iu odoo pip3 install -r /opt/odoo/odoo11/requirements.txt
+sudo -iu odoo pip3 install -r /opt/odoo/odoo/requirements.txt
 
-sudo mv /opt/confs/odoo11.service /etc/systemd/system/
-sudo mv /opt/confs/odoo11.conf /etc/
+sudo mv /opt/confs/odoo.service /etc/systemd/system/
+sudo mv /opt/confs/odoo.conf /etc/
 sudo mv /opt/confs/aeroo.service /etc/systemd/system/
 sudo mv /opt/confs/office.service /etc/systemd/system/
 sudo mv /opt/confs/nginxdef /etc/nginx/sites-available/
@@ -86,7 +86,7 @@ sudo mv /opt/confs/nginxdef /etc/nginx/sites-available/
 sudo systemctl daemon-reload
 sudo systemctl enable office.service
 sudo systemctl enable aeroo.service
-sudo systemctl enable odoo11.service
+sudo systemctl enable odoo.service
 
 
 sudo sed -i -e "s/example.com/$dom/g" /etc/nginx/sites-available/nginxdef
